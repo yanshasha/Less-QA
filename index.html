@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Less-QA by TooooBug</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Less-QA</h1>
+        <p>LESS中国官网Q&amp;A</p>
+        <p class="view"><a href="https://github.com/TooooBug/Less-QA">View the Project on GitHub <small>TooooBug/Less-QA</small></a></p>
+        <ul>
+          <li><a href="https://github.com/TooooBug/Less-QA/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/TooooBug/Less-QA/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/TooooBug/Less-QA">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h3>LESS是什么？</h3>
+
+<p>LESS 是一种动态样式语言，为CSS赋予了动态语言的特性，如变量、继承、运算、函数等。</p>
+
+<h3>LESS的原理是什么？它是怎么编译的？</h3>
+
+<p>LESS 在被渲染前需要被编译成浏览器可理解的CSS，这个编译工作可以在三个不同的时机完成：</p>
+
+<p>1、编辑完LESS文件后手工编译<br>
+2、在用户访问的时候由服务端编译<br>
+3、将LESS文件给到浏览器，使用less.js编译   </p>
+
+<p>具体的编译方法，请参见LESS中国官网的常用工具。</p>
+
+<h3>为什么less.js无法工作？难道不是直接引用就可以了吗？</h3>
+
+<p>使用less.js的时候，我们编写的less文件并不是像CSS一样由浏览器直接从服务器拉取，而是由less.js通过ajax的方式动态拉取。因此，如果本地使用的话，在ajax过程中会遭遇跨域问题导致拉取失败。</p>
+
+<p>解决方案为：在本机搭建一个简单的HTTP环境，通过本地站点路径（如http://localhost）来访问，而不是直接从文件系统（如file:///d:/index.html）访问。</p>
+
+<h3>为什么我使用了自己的网站空间（服务器），less.js仍然无法工作？</h3>
+
+<p>如果访问的less文件路径正确，那么很可能是服务器不支持.less文件访问。</p>
+
+<p>验证此问题的方法很简单：直接在浏览器中访问.less文件，如果出现404错误，即为此问题。</p>
+
+<p>解决方法：联系空间提供商或者是自己修改服务器配置，添加.less后缀的MIME或者是修改服务器对未知MIME的策略，使之可以被访问。</p>
+
+<p>此外，此问题还有一个更简单的解决办法：直接将.less文件后缀改为.css即可。</p>
+
+<h3>如果在使用LESS的时候获得语法高亮和提示？</h3>
+
+<p>目前，已经有一些编辑器如Sublime内置了对LESS的支持。对于没有内置的编辑器，建议搜索一下是否已经有对应插件。</p>
+
+<p>如果实在没有插件，也可以将后缀改为.css获得部分的语法高度和提示。</p>
+
+<h3>LESS的浏览器兼容性如何？为什么官网用IE访问很奇怪？</h3>
+
+<p>LESS只是一个改变CSS写法的工具，不影响编译后的浏览器兼容性，即你的CSS兼容性怎么样，LESS兼容性就怎么样。</p>
+
+<p>至于lesscss.org和lesscss.net使用IE访问时的效果问题，是因为LESS的作者手工写了一段代码对IE做了屏蔽处理，猜测是不太鼓励IE用户访问自己的网站。lesscss.net在翻译的时候遵从了作者的这一意愿，所以在IE下的效果和lesscss.org一样。</p>
+
+<h3>为什么LESS英文官网无法访问？</h3>
+
+<p>这个问题，只有伟大的GFW可以回答……</p>
+
+<h3>现在用LESS的网站多吗？怎么知道一个网站有没有使用LESS？</h3>
+
+<p>据了解，目前国内使用LESS的网站还是不少的，淘宝的大部分团队都已经在使用，此外据路边社不靠谱消息，DNSPOD、点点、LOFTER等一些具有较大影响力的产品也在使用。</p>
+
+<p>因为LESS可以在编辑时编译成CSS，也可以在服务端编译，因此严格来讲是没有办法获知一个网站是否在使用LESS的。当然你也可以去翻一下CSS的注释，说不定能发现点什么。</p>
+
+<h3>我还有问题不明白，怎么办？</h3>
+
+<p>欢迎与我们讨论，联系方式请参见LESS中国官方网站首页。如果问题有共性，我们会加入Q&amp;A，另外也欢迎在github上直接对本文档进行完善！</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/TooooBug">TooooBug</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("54306588");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
